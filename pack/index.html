@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>June profit bridge · North Wharf</title>
+  <style>
+    body { margin: 0; background: #fff; color: #161616; font-family: "Segoe UI", sans-serif; }
+    main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 56px; }
+    .kicker { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0; }
+    h1 { font-size: 34px; font-weight: 600; letter-spacing: -0.03em; margin: 8px 0; }
+    p { line-height: 1.45; max-width: 68ch; }
+    svg { width: 100%; height: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #e4e4e4; }
+    th { font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: #555; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    footer { margin-top: 24px; color: #555; font-size: 13px; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="kicker">North Wharf s.r.o. · Bratislava · June 2026 · fictional</p>
+  <h1>Operating profit missed budget by −€17,700.</h1>
+  <p>Budget was €16,000. Actual was −€1,700. Volume is not the story. The miss is the discount on valves, the higher unit cost, and a one-off advisory fee. Extra fittings added little, because that product is the low-margin one.</p>
+  <svg viewBox="0 0 760 280" role="img" aria-label="Operating profit bridge"><line x1="36" y1="175.4" x2="752" y2="175.4" stroke="#bbb"/><rect x="62.6" y="24.0" width="48" height="151.4" fill="#161616"/><text x="86.6" y="252" text-anchor="middle" font-size="11" fill="#333">Budget</text><text x="86.6" y="18.0" text-anchor="middle" font-size="11" fill="#161616">€16,000</text><rect x="163.7" y="24.0" width="48" height="11.4" fill="#9f1d1d"/><text x="187.7" y="252" text-anchor="middle" font-size="11" fill="#333">Volume</text><text x="187.7" y="18.0" text-anchor="middle" font-size="11" fill="#161616">−€1,200</text><rect x="264.9" y="35.4" width="48" height="58.6" fill="#9f1d1d"/><text x="288.9" y="252" text-anchor="middle" font-size="11" fill="#333">Price</text><text x="288.9" y="29.4" text-anchor="middle" font-size="11" fill="#161616">−€6,200</text><rect x="366.0" y="94.0" width="48" height="54.9" fill="#9f1d1d"/><text x="390.0" y="252" text-anchor="middle" font-size="11" fill="#333">Cost</text><text x="390.0" y="88.0" text-anchor="middle" font-size="11" fill="#161616">−€5,800</text><rect x="467.1" y="148.9" width="48" height="14.2" fill="#9f1d1d"/><text x="491.1" y="252" text-anchor="middle" font-size="11" fill="#333">Overhead</text><text x="491.1" y="142.9" text-anchor="middle" font-size="11" fill="#161616">−€1,500</text><rect x="568.3" y="163.1" width="48" height="28.4" fill="#9f1d1d"/><text x="592.3" y="252" text-anchor="middle" font-size="11" fill="#333">One-off</text><text x="592.3" y="157.1" text-anchor="middle" font-size="11" fill="#161616">−€3,000</text><rect x="669.4" y="175.4" width="48" height="16.1" fill="#161616"/><text x="693.4" y="252" text-anchor="middle" font-size="11" fill="#333">Actual</text><text x="693.4" y="169.4" text-anchor="middle" font-size="11" fill="#161616">−€1,700</text></svg>
+  <h2>By product</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th><th>Qty</th><th>Price</th><th>Unit cost</th>
+        <th>Volume</th><th>Price effect</th><th>Cost effect</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Fitting</td><td class='num'>500 → 1,400</td><td class='num'>€20 → €19</td><td class='num'>€16 → €16</td><td class='num'>€3,600</td><td class='num'>−€1,400</td><td class='num'>€0</td></tr><tr><td>Hose</td><td class='num'>2,000 → 2,100</td><td class='num'>€40 → €40</td><td class='num'>€28 → €30</td><td class='num'>€1,200</td><td class='num'>€0</td><td class='num'>−€4,200</td></tr><tr><td>Valve</td><td class='num'>1,000 → 800</td><td class='num'>€80 → €74</td><td class='num'>€50 → €52</td><td class='num'>−€6,000</td><td class='num'>−€4,800</td><td class='num'>−€1,600</td></tr>
+    </tbody>
+  </table>
+  <footer>
+    Volume uses the budget margin, so selling more fittings does not look like a price change.
+    Price and cost use actual quantity. Overhead is warehouse and admin against its own budget.
+    The one-off had no budget. The seven bars are the query in sql/02_profit_bridge.sql, and the unexplained column of that query is zero.
+  </footer>
+</main>
+</body>
+</html>
